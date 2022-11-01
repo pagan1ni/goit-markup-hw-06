@@ -187,6 +187,7 @@ ul,ol {
     margin-right:auto;
     padding: 10px 32px;
     border-radius: 4px;
+    border: none;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -198,6 +199,7 @@ ul,ol {
     letter-spacing: 0.06em;
     color: var(--herov-color);
     background: var(--hover-focus);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* --------------SECTION-ABOUT----------------- */
@@ -299,7 +301,7 @@ ul,ol {
 .about-team{
     padding-top: var(--pading-section);
     padding-bottom: var(--pading-section);
-    background-color: #F5F4FA;
+    background-color: var(--herov-color);
 }
 
 .about-team-list{
@@ -314,7 +316,7 @@ ul,ol {
          0px 2px 1px rgba(0, 0, 0, 0.2),
          0px 1px 1px rgba(0, 0, 0, 0.14),
          0px 1px 3px rgba(0, 0, 0, 0.12);
-         border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .about-business-header,
@@ -523,7 +525,7 @@ ul,ol {
 .footer-soc-link{
     width: 44px;
     height: 44px;
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color:rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -552,14 +554,16 @@ ul,ol {
 
 /* --------------Footer form ------- */
 
-.footer-form-container{
+.footer-form{
     display: flex;
     margin-left: 93px;
 }
 
 
-.footer-form-label{
+.footer-form-titel{
+    flex-direction: column;
     margin-bottom: 20px;
+    margin-left: 93px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -571,21 +575,27 @@ ul,ol {
 }
 
 .footer-input{
-    width: 358px;
+    flex-direction: row;
+    width: 378px;
     height: 50px;
-    padding: 15px 0px 15px 16px;
+    margin-right: 12px;
+    padding: 16px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: #2196F300;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+    outline: none;
 }
+
 
 .footer-btn{
     display: flex;
+    flex-direction: row;
     align-items: center;
     text-align: center;
-    margin-left: 12px;
     padding: 10px 28px;
     width: 200px;
     height: 50px;
@@ -598,7 +608,7 @@ ul,ol {
     letter-spacing: 0.06em;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border: 0px;
+    border: none;
     border-radius: 4px;
     color: var(--herov-color);
 }
@@ -740,6 +750,7 @@ ul,ol {
     transform: translate(-50%,-50%);
     width: 528px;
     min-height: 581px;
+    padding: 40px;
     background-color: #FFFFFF;
     box-shadow: 
         0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -758,15 +769,17 @@ ul,ol {
     border-radius: 50%;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    pointer-events: stroke;
 }
 
-.modal-close-btn:focus-within .icon-vector {
+.modal-close-btn:focus-within .icon-vector,
+.modal-close-btn:hover .icon-vector {
     fill: var(--hover-focus);
     transition-duration: var(--time--);
     transition-timing-function: var(--timing-function);
 }
 
-.is-hidden{
+.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -774,7 +787,7 @@ ul,ol {
 
 /* -------Form---------- */
 .modal-form-header {
-    margin: 40px 40px 12px 40px;
+    margin-bottom: 12px; 
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -787,7 +800,6 @@ ul,ol {
 
 .form-label {
     display: block;
-    margin-left: 40px;
     margin-bottom: 4px;
 
     font-family: 'Roboto';
@@ -801,11 +813,12 @@ ul,ol {
 
 .form-control {
     position: relative;
-    margin: 0px 40px 10px 40px;
+    margin-bottom: 10px;
 }
 
 .form-input {
     width: 100%;
+    height: 40px;
     padding: 12px 12px 12px 32px;
     border: 1px solid var(--input-border);
     border-radius: 4px;
@@ -833,12 +846,14 @@ ul,ol {
 }
 
 .form-textarea {
-    width: 448px;
-    height: 138px;
-    margin: 0px 40px 20px 40px;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
     padding: 12px 16px;
     border: 1px solid var(--input-border);
     border-radius: 4px;
+    resize: none;
+    outline: none;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -848,6 +863,7 @@ ul,ol {
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
+
 
 /* Checkbox */
 .checkbox-input {
@@ -871,8 +887,6 @@ ul,ol {
 .checkbox {
     position: relative;
     margin-bottom: 30px;
-    margin-left: 52px;
-    margin-right: 52px;
 }
 
 .checkbox-label {
@@ -912,9 +926,9 @@ ul,ol {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
     padding: 10px 52px;
     border-radius: 4px;
+    border: none;
 
     font-family: 'Roboto';
     font-style: normal;

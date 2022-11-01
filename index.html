@@ -367,26 +367,28 @@
                   </a>
                 </li>
               </ul>
-           </div>
-            <div class="footer-form-container"></div>
+          </div>
+          <div class="footer-form-container">
+            <p class="footer-form-titel">ПІДПИШИСЬ НА РОЗСИЛКУ</p>
             <form class="footer-form">
-            <label class="footer-form-label" for="footer-person-mail">
-              ПІДПИШИСЬ НА РОЗСИЛКУ</label>
               <input  class="footer-input" 
                       id="footer-person-mail" 
                       type="email" 
-                      name="footer-person-mail"
+                      name="footer-person-mail" 
                       placeholder="E-mail" />
+              <button class="footer-btn" type="submit">
+                Підписатися
+                  <svg class="footer-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+              </button>
             </form>
-            <button class="footer-btn" type="submit">
-              Підписатися
-              <svg class="footer-svg" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
           </div>
        </div>
     </footer>
+
+    <!-- -----------Modal-window-------- -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
